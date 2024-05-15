@@ -182,7 +182,7 @@ service:
 ##
 
 ingress:
-  enabled: false
+  enabled: true
   # ingressClassName: ""
   labels: {}
     # node-role.kubernetes.io/ingress: platform
@@ -197,7 +197,7 @@ ingress:
     # nginx.ingress.kubernetes.io/whitelist-source-range: 0.0.0.0/0
   path: /
   hosts:
-    - minio-example.local
+    - minioapi.local
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
@@ -210,7 +210,7 @@ consoleService:
   nodePort: 32001
 
 consoleIngress:
-  enabled: false
+  enabled: true
   # ingressClassName: ""
   labels: {}
     # node-role.kubernetes.io/ingress: platform
@@ -225,7 +225,7 @@ consoleIngress:
     # nginx.ingress.kubernetes.io/whitelist-source-range: 0.0.0.0/0
   path: /
   hosts:
-    - console.minio-example.local
+    - minio.local
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
